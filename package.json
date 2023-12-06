@@ -5,6 +5,8 @@
   "main": "ser/main.js",
   "scripts": {
     "test": "jest -i",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
     "start": "node src/main.js"
   },
   "jest": {
