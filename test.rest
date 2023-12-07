@@ -1,0 +1,142 @@
+### USERS
+
+#### register
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "redha",
+    "password": "rahasia",
+    "name": "tata redha"
+}
+
+#### login
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "redha",
+    "password": "rahasia"
+}
+
+##### dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+##### current user
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+
+##### update user
+PATCH  http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+{
+    "name": "redha alfath"
+}
+
+##### logout user
+DELETE   http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+
+### CONTACT
+
+#### create contact
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+{
+    "first_name": "Joko",
+    "last_name": "Moro",
+    "email": "joko@rdh.com",
+    "phone": "1324123"
+}
+
+#### get all contact
+Get http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+
+#### get contact
+Get http://localhost:3000/api/contacts/532
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+#### update contact
+PUT http://localhost:3000/api/contacts/533
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+{
+    "first_name": "Rully",
+    "last_name": "Maria",
+    "email": "rully@rdh.com",
+    "phone": "777323421"
+}
+
+#### delete contact
+DELETE  http://localhost:3000/api/contacts/533
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+
+### ADDRESS
+#### create address
+POST http://localhost:3000/api/contacts/531/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+{
+   "street": "Kantor",
+   "city": "Semarang",
+   "province": "Jawa Tengah",
+   "country": "Indonesia",
+   "postal_code": "512312"
+}
+
+#### list address
+GET http://localhost:3000/api/contacts/531/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+#### detail address
+GET http://localhost:3000/api/contacts/531/addresses/64
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+#### update address
+PUT http://localhost:3000/api/contacts/531/addresses/65
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
+
+{
+   "street": "Jl Semanggi",
+   "city": "Surabaya",
+   "province": "Jawa Timur",
+   "country": "Indonesia",
+   "postal_code": "612234"
+}
+
+#### delete address
+DELETE http://localhost:3000/api/contacts/531/addresses/65
+Content-Type: application/json
+Accept: application/json
+Authorization: dd5a1cb9-6f45-4725-b71a-b0d3e97a79ba
